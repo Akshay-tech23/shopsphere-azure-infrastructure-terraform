@@ -1,0 +1,41 @@
+name: Terraform validation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Format and validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.10.5
+
+      - name: Check formatting
+        run: terraform fmt -check -recursive
+
+      - name: Initialize root configuration without backend
+        run: terraform init -backend=false -input=false
+
+      - name: Validate root configuration
+        run: terraform validate
+
+      - name: Initialize language examples
+        working-directory: examples/terraform-language
+        run: terraform init -backend=false -input=false
+
+      - name: Validate language examples
+        working-directory: examples/terraform-language
+        run: terraform validate

@@ -1,0 +1,34 @@
+# Terraform working directory and local state
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# Local variable/backend configuration
+*.tfvars
+*.tfvars.json
+backend.hcl
+
+# Terraform crash and override files
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Local credentials and SSH material
+*.pem
+*.key
+*.pub
+id_rsa
+id_ed25519
+shopsphere_azure
+
+# Editor / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+# Terraform plans
+*.tfplan
+*.plan

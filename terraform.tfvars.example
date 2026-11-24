@@ -1,0 +1,6 @@
+resource_group_name         = "rg-shopsphere-dev"
+location                    = "Central India"
+backend_vm_size             = "Standard_D2s_v3"
+admin_username              = "azureuser"
+# Update this path to the PUBLIC key file on your own computer.
+admin_ssh_public_key_path   = "~/.ssh/shopsphere_azure.pub"
