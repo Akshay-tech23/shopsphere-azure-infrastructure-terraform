@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ShopSphere – Azure Infrastructure Automation with Terraform
 
 A hands-on Infrastructure as Code (IaC) project that provisions a segmented Azure network and a private backend Linux virtual machine using Terraform and the AzureRM provider.
@@ -154,3 +155,7 @@ GitHub Actions runs Terraform formatting and validation without connecting to th
 ## License
 
 Add a license if you want others to reuse or redistribute this project. Until then, all rights are reserved by the repository owner by default.
+=======
+# shopsphere-azure-infrastructure-terraform
+Azure Infrastructure as Code project using Terraform, featuring virtual networks, network security, Linux VMs, remote state management and reusable configurations.
+>>>>>>> origin/main
